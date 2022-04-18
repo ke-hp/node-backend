@@ -1,0 +1,36 @@
+{
+  "name": "base",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon --config nodemon.json",
+    "prettier": "npx prettier --write ."
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "config": "^3.3.7",
+    "koa": "^2.13.4",
+    "koa-jwt": "^4.0.3",
+    "koa-router": "^10.1.1",
+    "koa-static": "^5.0.0",
+    "koa2-cors": "^2.0.6",
+    "lodash": "^4.17.21",
+    "moment": "^2.29.3",
+    "mongoose": "^6.3.0",
+    "node-schedule": "^2.1.0",
+    "nodemon": "^2.0.15",
+    "pino": "^7.10.0",
+    "request-ip": "^2.1.3",
+    "require-directory": "^2.1.1",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "pre-commit": "^1.2.2",
+    "prettier": "^2.6.2"
+  },
+  "pre-commit": [
+    "prettier"
+  ]
+}

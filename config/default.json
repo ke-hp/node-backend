@@ -1,0 +1,23 @@
+{
+  "token": {
+    "version": 0
+  },
+
+  "http": {
+    "port": 3000
+  },
+
+  "mongoUrl": "mongodb://test:test@localhost:27017/test",
+
+  "redis": {
+    "part": "localhost",
+    "port": 1000,
+    "db": 1
+  },
+
+  "mysql": {
+    "part": "localhost",
+    "port": 1000,
+    "db": 1
+  }
+}
