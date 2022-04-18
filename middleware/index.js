@@ -1,4 +1,7 @@
 const _ = require("lodash");
+const static = require("koa-static");
+const mount = require("koa-mount");
+const path = require("path");
 const logger = require("pino")();
 const requireDirectory = require("require-directory");
 
@@ -9,6 +12,7 @@ module.exports = (app) => {
 
   if (!_.isEmpty(app)) {
     mLog.info("加载中...");
+    app.use(mount("/apidoc", static(path.join(__dirname, "../apidoc"))));
     app.use(m.log);
     app.use(m.responseTime);
   }

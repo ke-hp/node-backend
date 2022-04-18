@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "dev": "nodemon --config nodemon.json",
-    "prettier": "npx prettier --write ."
+    "prettier": "npx prettier --write .",
+    "api": "apidoc -i controller -o apidoc"
   },
   "author": "",
   "license": "ISC",
@@ -13,6 +14,7 @@
     "config": "^3.3.7",
     "koa": "^2.13.4",
     "koa-jwt": "^4.0.3",
+    "koa-mount": "^4.0.0",
     "koa-router": "^10.1.1",
     "koa-static": "^5.0.0",
     "koa2-cors": "^2.0.6",
