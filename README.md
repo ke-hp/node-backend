@@ -1,7 +1,7 @@
 [TOC]
 # 概述
 
-node-base 是个人 Node.js 开发代码组织模板，宗旨在于简单、易用
+node-base 是个人 Node.js 开发代码组织模板：简单、易用
 
 # 版本
 
