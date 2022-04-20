@@ -22,4 +22,6 @@ for (let e in schemaList) {
 
 // collection.Account.create({ name: "tset" });
 
-module.exports = collection;
+module.exports = {
+  db: collection,
+};

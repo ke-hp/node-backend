@@ -9,15 +9,18 @@ const rLog = logger.child({ module: "路由" });
 const baseR = new Router({ prefix: "/v1" });
 const authR = new Router({ prefix: "/v1" });
 
-// 基础路由 登陆 静态 等无需验证的路由
-baseR.post("/login", c.user.login);
-baseR.get("/login", c.user.login);
+// 基础路由 无需验证
+baseR.get("/hello", c.hello.hello); // 你好世界
+baseR.post("/signup", c.user.signup); // 注册
+baseR.post("/signin", c.user.signin); // 登录
+baseR.post("/signup", c.user.signout); // 登出
 
-// 需要验证路由
-authR.post("changePwd", c.user.changePwd);
+// 鉴权路由 需要验证路由
+authR.use(m.auth); // 注册鉴权中间件
+authR.put("/change-password", c.user.changePassword);
 
 module.exports = (app) => {
   app.use(baseR.routes()).use(baseR.allowedMethods());
-  app.use(m.auth, authR.routes()).use(authR.allowedMethods());
+  app.use(authR.routes()).use(authR.allowedMethods());
   return {};
 };
