@@ -15,7 +15,7 @@ node-base 是个人 Node.js 开发代码组织模板：简单、易用
 ├── README.md
 ├── apidoc                // apidoc API 文档自动生成
 ├── apidoc.json           // apidoc 配置
-├── app.js                // 项目入坑
+├── app.js                // 项目入口
 ├── code                  // 项目错误码
 ├── config                 // 项目配置
 ├── controller            // 控制层
