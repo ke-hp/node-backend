@@ -7,8 +7,6 @@ const code = require("../code/public");
 
 module.exports = async function (ctx, next) {
 
-  console.log("3333333333333",)
-
   if (!ctx?.header?.authorization) {
     ctx.log.warn("无 token ");
     ctx.throw(403, code.JWT_NO.msg);
@@ -20,7 +18,7 @@ module.exports = async function (ctx, next) {
     ctx.throw(403, code.JWT_FORMAT_ERR.msg);
   }
 
-  //取出token
+  // 取出token
   const scheme = parts[0];
   if (!/^Bearer$/i.test(scheme)) {
     ctx.log.warn("token 格式错误");
@@ -30,14 +28,12 @@ module.exports = async function (ctx, next) {
   const token = parts[1];
   let err, tokenInfo;
 
-  //jwt.verify方法验证token是否有效
+  // jwt.verify方法验证token是否有效
   [err, tokenInfo] = await to(verify(token));
   if (_.isError(err)) {
     ctx.log.warn({ err }, "校验 token 错误");
     ctx.throw(403, code.JWT_VERIFY_ERR.msg);
   }
-
-  console.log("555555555555555555555555555555");
 
   await next();
 };
