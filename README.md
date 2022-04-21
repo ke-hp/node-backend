@@ -17,17 +17,17 @@ node-base 是个人 Node.js 开发代码组织模板：简单、易用
 ├── apidoc.json           // apidoc 配置
 ├── app.js                // 项目入口
 ├── code                  // 项目错误码
-├── config                 // 项目配置
+├── config                // 项目配置
 ├── controller            // 控制层
 ├── middleware            // 中间件
 ├── node_modules          // 项目依赖
 ├── nodemon.json          // nodemon 热启动配置（开发用）
 ├── package-lock.json
 ├── package.json          // 项目 package.json
-├── pkg                   // 额外包
+├── pkg                   // 额外pkg包
 ├── routers.js            // 项目路由
 ├── schedule              // 定时任务 
-├── service               // 俯卧层
+├── service               // 服务pkg层
 ├── store                 // 存储层
 └── util                  // 工具
 ```
