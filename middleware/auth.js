@@ -6,7 +6,6 @@ const { errRes } = require("../pkg/response");
 const code = require("../code/public");
 
 module.exports = async function (ctx, next) {
-
   if (!ctx?.header?.authorization) {
     ctx.log.warn("无 token ");
     ctx.throw(403, code.JWT_NO.msg);

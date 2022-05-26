@@ -1,4 +1,4 @@
-const {db} = require("../store/mongo");
+const { db } = require("../store/mongo");
 const to = require("await-to-js").default;
 
 // 起始值
@@ -8,7 +8,7 @@ const UID_START_NUM = 100000;
 const counter = async (_id, start) => {
   let err, result;
   [err, result] = await to(
-      db.Counters.findOneAndUpdate(
+    db.Counters.findOneAndUpdate(
       { _id: _id },
       { $inc: { next: 1 } },
       {

@@ -1,4 +1,4 @@
-const {verify} = require("../pkg/token");
+const { verify } = require("../pkg/token");
 module.exports = {
   /**
    * 100001
@@ -17,7 +17,6 @@ module.exports = {
 
   // 1002xx 请求相关错误
   REQ_ARG_ERR: { code: 100201, msg: "请求参数错误" },
-
 
   // 1003xx jwt 模块
   JWT_NO: { code: 100301, msg: "无 token" },

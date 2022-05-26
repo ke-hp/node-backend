@@ -1,7 +1,7 @@
 const schedule = require("node-schedule");
 const requireDirectory = require("require-directory");
 
-const ruleObj= requireDirectory(module);
+const ruleObj = requireDirectory(module);
 
 /**
  * *  *  *  *  *  *

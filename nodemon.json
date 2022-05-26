@@ -1,9 +1,9 @@
 {
-    "restartable": "rs",
-    "verbose": true,
-    "watch": ["*"],
-    "ignore": ["logs/*"],
-    "delay": "1000",
-    "exec": "node ./app.js",
-    "ext": "js json"
+  "restartable": "rs",
+  "verbose": true,
+  "watch": ["*"],
+  "ignore": ["logs/*"],
+  "delay": "1000",
+  "exec": "node ./app.js",
+  "ext": "js json"
 }

@@ -24,7 +24,7 @@ const reqNonceClient = createClient({
 reqNonceClient.on("error", (err) =>
   rLog.error({ err }, "reqNonceRedisDB 错误")
 );
- reqNonceClient.connect();
+reqNonceClient.connect();
 
 module.exports = {
   tokenRedisDB: tokenClient,
