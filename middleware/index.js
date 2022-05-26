@@ -13,11 +13,11 @@ module.exports = (app) => {
 
   if (!_.isEmpty(app)) {
     mLog.info("加载中...");
+    app.use(m.err)
     app.use(mount("/apidoc", static(path.join(__dirname, "../apidoc")))); // 静态
     app.use(body())
     app.use(m.log); // 加载日志器
     app.use(m.responseTime); // 计算加载时间
-
   }
 
   return m;
